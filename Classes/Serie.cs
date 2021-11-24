@@ -6,10 +6,11 @@ namespace DIO.Series
 {
     public class Serie : EntidadeBase
     {
-        private Genero Genero { get; set; }
-        private string Titulo { get; set; }
-        private string Descricao { get; set; }
-        private int Ano { get; set; }
+        private Genero Genero;
+        private string Titulo;
+        private string Descricao;
+        private int Ano;
+        private bool Ativo;
 
         public Serie(int id, Genero genero, string titulo, string descricao, int ano)
         {
@@ -18,6 +19,7 @@ namespace DIO.Series
             this.Titulo = titulo;
             this.Descricao = descricao;
             this.Ano = ano;
+            this.Ativo = true;
         }
 
         public override string ToString()
@@ -34,6 +36,18 @@ namespace DIO.Series
         public int GetId => this.Id;
 
         public string GetTitulo() => this.Titulo;
+
+        public void Desativar()
+        {
+            this.Ativo = false;
+        }
+
+        public void Ativar()
+        {
+            this.Ativo = true;
+        }
+
+        public bool GetAtivo() => this.Ativo;
 
     }
 }
