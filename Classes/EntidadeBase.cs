@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace DIO.Series
+{
+    public abstract class EntidadeBase
+    {
+        public int Id;
+
+        //public abstract void SetId();
+    }
+}
