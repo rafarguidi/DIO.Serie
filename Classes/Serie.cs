@@ -49,5 +49,9 @@ namespace DIO.Series
 
         public bool GetAtivo() => this.Ativo;
 
+        public void SetTitulo(string titulo) => this.Titulo = titulo;
+        public void SetDescricao(string descricao) => this.Descricao = descricao;
+        public void SetAno(int ano) => this.Ano = ano;
+        public void SetGenero(Genero genero) => this.Genero = genero;
     }
 }

@@ -39,7 +39,7 @@ namespace DIO.Series
 
         public Serie RetornarPorId(int id)
         {
-            return listaSerie.Find(s => s.Id == id);
+            return listaSerie.FirstOrDefault<Serie>(s => s.Id == id);
         }
     }
 }
